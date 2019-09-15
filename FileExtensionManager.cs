@@ -14,7 +14,7 @@ namespace FileExtApp
         // key (file extension) value (default program) pair
         public FileExtensionManager()
         {
-            
+            InitializeComponent();
         }
 
         private void BtnAddExt_Click(object sender, EventArgs e)
