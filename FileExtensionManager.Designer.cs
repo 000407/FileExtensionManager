@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFileType = new System.Windows.Forms.TextBox();
+            this.txtExtension = new System.Windows.Forms.TextBox();
             this.btnAddExt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtExtension = new System.Windows.Forms.TextBox();
+            this.txtProgramName = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.twFileTypes = new System.Windows.Forms.ListBox();
+            this.lbDisplay = new System.Windows.Forms.ListBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtFileType
+            // txtExtension
             // 
-            this.txtFileType.Location = new System.Drawing.Point(382, 23);
-            this.txtFileType.Name = "txtFileType";
-            this.txtFileType.Size = new System.Drawing.Size(191, 20);
-            this.txtFileType.TabIndex = 1;
+            this.txtExtension.Location = new System.Drawing.Point(382, 23);
+            this.txtExtension.Name = "txtExtension";
+            this.txtExtension.Size = new System.Drawing.Size(191, 20);
+            this.txtExtension.TabIndex = 1;
             // 
             // btnAddExt
             // 
@@ -76,12 +76,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Program Name";
             // 
-            // txtExtension
+            // txtProgramName
             // 
-            this.txtExtension.Location = new System.Drawing.Point(382, 61);
-            this.txtExtension.Name = "txtExtension";
-            this.txtExtension.Size = new System.Drawing.Size(191, 20);
-            this.txtExtension.TabIndex = 2;
+            this.txtProgramName.Location = new System.Drawing.Point(382, 61);
+            this.txtProgramName.Name = "txtProgramName";
+            this.txtProgramName.Size = new System.Drawing.Size(191, 20);
+            this.txtProgramName.TabIndex = 2;
             // 
             // btnDelete
             // 
@@ -94,13 +94,14 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // twFileTypes
+            // lbDisplay
             // 
-            this.twFileTypes.FormattingEnabled = true;
-            this.twFileTypes.Location = new System.Drawing.Point(30, 21);
-            this.twFileTypes.Name = "twFileTypes";
-            this.twFileTypes.Size = new System.Drawing.Size(240, 264);
-            this.twFileTypes.TabIndex = 9;
+            this.lbDisplay.FormattingEnabled = true;
+            this.lbDisplay.Location = new System.Drawing.Point(30, 21);
+            this.lbDisplay.Name = "lbDisplay";
+            this.lbDisplay.Size = new System.Drawing.Size(240, 264);
+            this.lbDisplay.TabIndex = 9;
+            this.lbDisplay.SelectedIndexChanged += new System.EventHandler(this.LbDisplay_SelectedIndexChanged);
             // 
             // btnClear
             // 
@@ -148,15 +149,16 @@
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnListAll);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.twFileTypes);
+            this.Controls.Add(this.lbDisplay);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.txtExtension);
+            this.Controls.Add(this.txtProgramName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddExt);
-            this.Controls.Add(this.txtFileType);
+            this.Controls.Add(this.txtExtension);
             this.Name = "FileExtensionManager";
             this.Text = "File Extension Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FileExtensionManager_FormClosing);
             this.Load += new System.EventHandler(this.FileExtensionManager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,13 +166,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtFileType;
+        private System.Windows.Forms.TextBox txtExtension;
         private System.Windows.Forms.Button btnAddExt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtExtension;
+        private System.Windows.Forms.TextBox txtProgramName;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.ListBox twFileTypes;
+        private System.Windows.Forms.ListBox lbDisplay;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnListAll;
         private System.Windows.Forms.Button btnFind;
